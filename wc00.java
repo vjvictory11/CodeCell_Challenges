@@ -11,5 +11,3 @@ public class wc00 {
         System.out.println(f+"+"+s+"+"+t);
     }
 }
-
-/*this is the output*/
