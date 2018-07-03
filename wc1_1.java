@@ -14,11 +14,9 @@ public class wc1_1 {
         for(int i=0;i < temp.length; i++ ) {
             if((int)temp[i] >= 97 && (int)temp[i] <=122) {
                 msgArray[t++] = temp[i];
-                System.out.print(msgArray[t-1]);
             }
         }
         int msgLength = t;
-        System.out.println(msgLength);
         char[] keyArray = (key).toCharArray();
         int keyLength = key.length();
         getId(keyArray, msgArray,msgLength);
