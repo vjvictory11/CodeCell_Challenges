@@ -5,6 +5,7 @@ public class wc1_1 {
         Scanner sc=new Scanner(System.in);
         // System.out.println("enter key");
         String key = sc.next();
+        key = key.toLowerCase();
         // System.out.println("enter message");
         String msg = sc.nextLine();
         msg = msg.toLowerCase();
