@@ -8,11 +8,20 @@ public class SumoWrestling {
         Collections.sort(arr);
         int grpSize = 1;
         for (int i = 0; i < arr.size()-1; i++) {
-            if(Math.abs(arr.get(i)-arr.get(i+1))<=1)
-                grpSize++;
-            else
-                grpSize = 1;
         }
-        System.out.println(grpSize);
+        int i=1,j= 0;
+        int max = 1;
+        while(i<arr.size()) {
+            if(Math.abs(arr.get(i)-arr.get(j))<=1){
+                i++;
+                grpSize++;
+                max = grpSize>max?grpSize:max;
+            }
+            else {
+                j++;
+                grpSize--;
+            }
+        }
+        System.out.println(max);
     }
 }
