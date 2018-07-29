@@ -10,22 +10,25 @@ public class MarbleGame {
     }
 
     static int findWinner(int n) {
-        if(n%3==0)
-            return getWinner(n,"12");
-        if(n%3==1)
-            return getWinner(n,"13");
-        if(n%3==2)
-            return getWinner(n,"123");
+        if(n%3==0){
+            int t = n/2;
+            if(n%2==1)
+                return 1;
+            else return 2;
+        }
+        if(n%3==1){
+            int t = n/3;
+            if(n%2==1)
+                return 1;
+            else return 2;
+        }
+        if(n%3==2){
+            int t = n/3;
+            if(n%2==1)
+                return 1;
+            else return 2;
+        }
         return -1;
-    }
-
-    static int getWinner(int n, String str) {
-        int t = n%3;
-        int q= n/3;
-        String x = String.valueOf(t);
-        if(str.contains(x)&& q%2==1)
-            return 2;
-        return 1;
     }
 
 }
